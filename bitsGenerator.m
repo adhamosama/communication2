@@ -11,4 +11,14 @@ for j = 1 : numberOfBits
 end
 
 %upsample the bits to convulte it properly
-bits = upsample(bits,4);
+bits = upsample(bits,5);
+
+%create pulse array
+pulse = [5 4 3 2 1] / sqrt(55);
+
+%convulte bits with pulse to get final waveform
+bits = conv(bits, pulse);
+
+%cut out the extra 4 bits at the end
+%these bits are generated due to the conv and are not wanted
+bits = bits(1:numberOfBits*5);
