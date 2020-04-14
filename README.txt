@@ -1,8 +1,5 @@
-/* Adham modification */
-added convulution to the bitsGenerator to return the waveform not only the sequence of bits
+I have attached a picture of the output.
 
-Data : 14/4/2020
-
-I have changed the bitsGenerator funcation as i need the original sequance of bits in error detection
-
-if you only need the waveform just use [ YourVariable , ~ ] = bitsGenerator ;
+As expected the probabilty of error when we are using the matched filter is less than when we use the square filter.
+Also the probabilty of error when using the matched filter is almost the same as the theortical BER which is proving
+that the Matched filters give us the least possible probabilty of error.
