@@ -4,13 +4,7 @@ function [ pulses , sequencebits ] = bitsGenerator(numberOfBits)
 sequencebits = randi([0 1],1,numberOfBits);
 
 %replace every zero with -1 to suit this line coding
-for j = 1 : numberOfBits
-    if (sequencebits(j) == 0)
-        bits(j) = -1;
-    else 
-        bits(j) = 1;
-    end
-end
+bits = (2 * sequencebits) - 1;
 
 %upsample the bits to convulte it properly
 bits = upsample(bits,5);
