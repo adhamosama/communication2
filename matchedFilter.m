@@ -10,3 +10,4 @@ matchedFilter = fliplr (pulse);
 %convolve the sequence with matched filter to produce 
 %the decision making signal
 matchedFilterUsed = conv (sequence , matchedFilter);
+matchedFilterUsed = matchedFilterUsed(1:10*5);
